@@ -1,0 +1,18 @@
+<h1>Listing conversations</h1>
+<%= link_to 'New', new_conversation_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th colspan="2"></th>
+  </tr>
+  <% @conversations.each do |conv| %>
+  <tr>
+    <td><%= conv.title %></td>
+    <td><%= conv.description %></td>
+    <td><%= link_to 'Show', conversation_path(conv) %></td>
+    <td><%= link_to 'Edit', edit_conversation_path(conv) %></td>
+    <td><%= link_to 'Destroy', conversation_path(conv), method: :delete, data: {confirm: 'Are you sure?'}%></td>
+  </tr>
+  <% end %>
+</table>

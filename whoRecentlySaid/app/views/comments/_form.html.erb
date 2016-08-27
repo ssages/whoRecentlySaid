@@ -1,0 +1,13 @@
+<%= form_for([@conversation, @conversation.comments.build]) do |f| %>
+<p>
+    <%= f.label :profile %>
+    <%= f.text_field :profile %>
+</p>
+<p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

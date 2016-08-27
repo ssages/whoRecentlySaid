@@ -1,0 +1,11 @@
+<P>
+  <strong>Profile:</strong>
+  <%= comment.profile %>
+</p>
+<p>
+  <strong>comment:</strong>
+  <%= comment.body %>
+</p>
+<p>
+  <%= link_to 'Delete', [comment.conversation, comment], method: :delete, data: {confirm: 'Are you sure?'} %>
+</p>
