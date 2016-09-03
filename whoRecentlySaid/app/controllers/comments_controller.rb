@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
 
     redirect_to conversation_path(@conversation)
   end
-  
+
   private
   def comment_params
     params.require(:comment).permit(:profile, :body)
